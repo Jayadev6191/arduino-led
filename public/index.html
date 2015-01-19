@@ -1,0 +1,28 @@
+<html ng-app="arduino">
+  <head>
+   	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+  </head>
+  <body>
+   <div ng-controller="ledController">
+   		<div class="container">
+	    	<h1>Arduino Led Example</h1>
+	    	<hr>
+	    	<form id="flicker_rate">
+	    		<input type="text" ng-model="led.rate" placeholder="Flicker rate:">
+	    		<button class="btn btn-success" ng-click="flicker(led)" type="submit">Flicker</button>
+	    	</form>
+    	</div>
+
+    	<div class="container">
+	    	<h1>Led Switch</h1>
+	    	<hr>
+	    	<button class="btn btn-success" ng-click="on()">On</button>
+	    	<button class="btn btn-danger" ng-click="off()">Off</button>
+    	</div>
+    </div> 
+  </body>
+  <script src="client.js"></script>
+</html>
